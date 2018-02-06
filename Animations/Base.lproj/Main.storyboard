@@ -1,80 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Banner-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BannerViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfA-CN-UQW">
+                                <rect key="frame" x="138" y="318" width="98" height="30"/>
+                                <state key="normal" title="Toggle banner"/>
+                                <connections>
+                                    <action selector="toggleBanner:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dJH-2F-UXS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="HfA-CN-UQW" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="QjX-Oo-06o"/>
+                            <constraint firstItem="HfA-CN-UQW" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Wiz-Lg-Xb4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Banner" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1495" y="-153"/>
         </scene>
-        <!--Second-->
+        <!--Panning-->
+        <scene sceneID="xbG-uN-GRQ">
+            <objects>
+                <viewController id="ujk-ue-S5t" customClass="PanningViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oaR-F3-Gbe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pcV-59-z4A"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Panning" image="second" id="kld-KA-vZ0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKS-ww-H70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="877"/>
+        </scene>
+        <!--Slider-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SliderViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVx-xa-sN0" customClass="AnimatableView" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0AF-FY-Rmo"/>
+                                    <constraint firstAttribute="height" constant="150" id="HDF-w8-Bxk"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MVl-ai-g1a">
+                                <rect key="frame" x="23" y="513" width="329" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="AkN-P3-5K0"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="MVl-ai-g1a" secondAttribute="trailing" constant="25" id="6dW-jM-kWO"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="MVl-ai-g1a" secondAttribute="bottom" constant="75" id="H7Z-k3-7Vy"/>
+                            <constraint firstItem="MVl-ai-g1a" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="25" id="KKw-nv-oEY"/>
+                            <constraint firstItem="aVx-xa-sN0" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="RXX-Un-Qf9"/>
+                            <constraint firstItem="aVx-xa-sN0" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="bd4-PD-0Cg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Slider" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="slider" destination="MVl-ai-g1a" id="nN4-91-jY2"/>
+                        <outlet property="viewToAnimate" destination="aVx-xa-sN0" id="NXK-cy-5yg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1639" y="600"/>
+        </scene>
+        <!--Card flip-->
+        <scene sceneID="i1A-6q-xsg">
+            <objects>
+                <viewController id="a1a-0R-mbW" customClass="CardFlipViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rbj-XW-gML">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNP-8l-Acv" customClass="CardButton" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="112" y="219" width="150" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RM0-G3-mU5"/>
+                                    <constraint firstAttribute="height" constant="200" id="zd3-b5-m75"/>
+                                </constraints>
+                                <state key="normal" image="backCard"/>
+                                <connections>
+                                    <action selector="cardTappedWithSender:" destination="a1a-0R-mbW" eventType="touchUpInside" id="VJA-ef-adM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BNP-8l-Acv" firstAttribute="centerY" secondItem="Bjo-H9-dh3" secondAttribute="centerY" id="GKl-4S-FmW"/>
+                            <constraint firstItem="BNP-8l-Acv" firstAttribute="centerX" secondItem="Bjo-H9-dh3" secondAttribute="centerX" id="UG2-a2-cyj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bjo-H9-dh3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card flip" image="first" id="xsW-Hb-FUE"/>
+                    <connections>
+                        <outlet property="cardView" destination="BNP-8l-Acv" id="4If-uh-xk6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYt-gT-9gR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703.20000000000005" y="862.21889055472275"/>
+        </scene>
+        <!--Bouncing-->
+        <scene sceneID="v8b-uG-iv9">
+            <objects>
+                <viewController id="lJD-d5-dO6" userLabel="Bouncing" customClass="BouncingViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6GD-eY-OLi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTq-MR-HP1" customClass="BouncingButton" customModule="Animations" customModuleProvider="target">
+                                <rect key="frame" x="130" y="318" width="114" height="30"/>
+                                <state key="normal" title="Bouncing button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="lJD-d5-dO6" eventType="touchUpInside" id="9a7-Dk-ms0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cTq-MR-HP1" firstAttribute="centerX" secondItem="6GD-eY-OLi" secondAttribute="centerX" id="413-fZ-ZNf"/>
+                            <constraint firstItem="cTq-MR-HP1" firstAttribute="centerY" secondItem="6GD-eY-OLi" secondAttribute="centerY" id="G67-WB-jdT"/>
+                            <constraint firstItem="cTq-MR-HP1" firstAttribute="centerX" secondItem="6GD-eY-OLi" secondAttribute="centerX" id="v3m-Vs-c2o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sxd-tL-FhA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bouncing" image="first" id="M1c-h8-IU9"/>
+                    <connections>
+                        <outlet property="button" destination="cTq-MR-HP1" id="YXF-4D-YJC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzH-kv-yVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="866"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -86,8 +177,11 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="a1a-0R-mbW" kind="relationship" relationship="viewControllers" id="wg6-yO-TzC"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="lJD-d5-dO6" kind="relationship" relationship="viewControllers" id="JOn-rJ-dUr"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="ujk-ue-S5t" kind="relationship" relationship="viewControllers" id="IcY-GZ-yHt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -96,6 +190,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backCard" width="400" height="400"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

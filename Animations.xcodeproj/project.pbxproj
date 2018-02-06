@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		A7C708962026A0A50098A827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708952026A0A50098A827 /* AppDelegate.swift */; };
-		A7C708982026A0A50098A827 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708972026A0A50098A827 /* FirstViewController.swift */; };
-		A7C7089A2026A0A50098A827 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708992026A0A50098A827 /* SecondViewController.swift */; };
+		A7C708982026A0A50098A827 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708972026A0A50098A827 /* BannerViewController.swift */; };
+		A7C7089A2026A0A50098A827 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708992026A0A50098A827 /* SliderViewController.swift */; };
 		A7C7089D2026A0A50098A827 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C7089B2026A0A50098A827 /* Main.storyboard */; };
 		A7C7089F2026A0A50098A827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7C7089E2026A0A50098A827 /* Assets.xcassets */; };
 		A7C708A22026A0A50098A827 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7C708A02026A0A50098A827 /* LaunchScreen.storyboard */; };
+		A7C708AA2026A3580098A827 /* BouncingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708A92026A3580098A827 /* BouncingViewController.swift */; };
+		A7C708AC202767340098A827 /* CardFlipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708AB202767340098A827 /* CardFlipViewController.swift */; };
+		A7C708AE202799F50098A827 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708AD202799F50098A827 /* Animatable.swift */; };
+		A7C708B020279B4A0098A827 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708AF20279B4A0098A827 /* UIColor+Extension.swift */; };
+		A7C708B22027AD200098A827 /* PanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C708B12027AD200098A827 /* PanningViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A7C708922026A0A50098A827 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7C708952026A0A50098A827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7C708972026A0A50098A827 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A7C708992026A0A50098A827 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A7C708972026A0A50098A827 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		A7C708992026A0A50098A827 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		A7C7089C2026A0A50098A827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7C7089E2026A0A50098A827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7C708A12026A0A50098A827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7C708A32026A0A50098A827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7C708A92026A3580098A827 /* BouncingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncingViewController.swift; sourceTree = "<group>"; };
+		A7C708AB202767340098A827 /* CardFlipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipViewController.swift; sourceTree = "<group>"; };
+		A7C708AD202799F50098A827 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		A7C708AF20279B4A0098A827 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A7C708B12027AD200098A827 /* PanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanningViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				A7C708952026A0A50098A827 /* AppDelegate.swift */,
-				A7C708972026A0A50098A827 /* FirstViewController.swift */,
-				A7C708992026A0A50098A827 /* SecondViewController.swift */,
+				A7C708972026A0A50098A827 /* BannerViewController.swift */,
+				A7C708992026A0A50098A827 /* SliderViewController.swift */,
+				A7C708A92026A3580098A827 /* BouncingViewController.swift */,
+				A7C708AB202767340098A827 /* CardFlipViewController.swift */,
+				A7C708B12027AD200098A827 /* PanningViewController.swift */,
 				A7C7089B2026A0A50098A827 /* Main.storyboard */,
 				A7C7089E2026A0A50098A827 /* Assets.xcassets */,
 				A7C708A02026A0A50098A827 /* LaunchScreen.storyboard */,
 				A7C708A32026A0A50098A827 /* Info.plist */,
+				A7C708AD202799F50098A827 /* Animatable.swift */,
+				A7C708AF20279B4A0098A827 /* UIColor+Extension.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -139,9 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C7089A2026A0A50098A827 /* SecondViewController.swift in Sources */,
+				A7C708B22027AD200098A827 /* PanningViewController.swift in Sources */,
+				A7C708B020279B4A0098A827 /* UIColor+Extension.swift in Sources */,
+				A7C7089A2026A0A50098A827 /* SliderViewController.swift in Sources */,
+				A7C708AE202799F50098A827 /* Animatable.swift in Sources */,
 				A7C708962026A0A50098A827 /* AppDelegate.swift in Sources */,
-				A7C708982026A0A50098A827 /* FirstViewController.swift in Sources */,
+				A7C708982026A0A50098A827 /* BannerViewController.swift in Sources */,
+				A7C708AA2026A3580098A827 /* BouncingViewController.swift in Sources */,
+				A7C708AC202767340098A827 /* CardFlipViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
